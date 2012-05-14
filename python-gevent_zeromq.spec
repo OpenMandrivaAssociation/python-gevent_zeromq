@@ -41,4 +41,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %defattr(-,root,root)
 %doc examples/
-%py_platsitedir/%{module}*
+%py_sitedir/%{module}*
