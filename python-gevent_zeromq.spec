@@ -1,7 +1,12 @@
 %define	module	gevent_zeromq
 %define name	python-%{module}
 %define version 0.2.2
-%define release %mkrel 1
+%define	rel		2
+%if %mdkversion < 201100
+%define release %mkrel %rel
+%else
+%define	release	%rel
+%endif
 
 Summary:	gevent compatibility layer for pyzmq
 Name:		%{name}
@@ -28,11 +33,12 @@ greenlet.
 
 %install
 %__rm -rf %{buildroot}
-PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record=FILE_LIST
+PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
 %clean
 %__rm -rf %{buildroot}
 
-%files -f FILE_LIST
+%files
 %defattr(-,root,root)
 %doc examples/
+%py_platsitedir/%{module}*
