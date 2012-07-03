@@ -18,7 +18,7 @@ Group:		Development/Python
 Url:		http://github.com/traviscline/gevent-zeromq/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	python-gevent, python-pyzmq >= 2.2.0
-BuildRequires:	python-devel, python-cython
+BuildRequires:	python-devel, python-gevent, python-cython
 
 %description
 Wrapper of pyzmq to make it compatible with gevent. ZeroMQ socket operations
