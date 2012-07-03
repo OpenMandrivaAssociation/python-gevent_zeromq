@@ -1,7 +1,7 @@
 %define	module	gevent_zeromq
 %define name	python-%{module}
-%define version 0.2.2
-%define	rel		2
+%define version 0.2.3
+%define	rel		1
 %if %mdkversion < 201100
 %define release %mkrel %rel
 %else
@@ -17,7 +17,7 @@ License:	BSD
 Group:		Development/Python
 Url:		http://github.com/traviscline/gevent-zeromq/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-Requires:	python-gevent, python-pyzmq >= 2.1.0
+Requires:	python-gevent, python-pyzmq >= 2.2.0
 BuildRequires:	python-devel, python-cython
 
 %description
@@ -41,4 +41,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %defattr(-,root,root)
 %doc examples/
-%py_sitedir/%{module}*
+%py_platsitedir/%{module}*
