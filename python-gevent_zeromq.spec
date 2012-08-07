@@ -1,6 +1,6 @@
 %define	module	gevent_zeromq
 %define name	python-%{module}
-%define version 0.2.4
+%define version 0.2.5
 %define	rel		1
 %if %mdkversion < 201100
 %define release %mkrel %rel
