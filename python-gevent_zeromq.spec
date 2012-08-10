@@ -34,7 +34,7 @@ greenlet.
 %install
 %__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-find %{buildroot}
+
 %clean
 %__rm -rf %{buildroot}
 
