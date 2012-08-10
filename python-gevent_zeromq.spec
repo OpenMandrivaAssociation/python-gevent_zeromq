@@ -17,7 +17,6 @@ License:	BSD
 Group:		Development/Python
 Url:		http://github.com/traviscline/gevent-zeromq/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildArch:	noarch
 Requires:	python-gevent, python-pyzmq >= 2.2.0
 BuildRequires:	python-devel, python-cython, python-gevent, python-pyzmq >= 2.2.0
 
@@ -35,11 +34,11 @@ greenlet.
 %install
 %__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-
+find %{buildroot}
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc examples/
-%py_sitedir/%{module}*
+%py_platsitedir/%{module}*
