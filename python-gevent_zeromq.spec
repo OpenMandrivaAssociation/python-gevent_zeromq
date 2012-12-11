@@ -1,6 +1,6 @@
 %define	module	gevent_zeromq
 %define name	python-%{module}
-%define version 0.2.5
+%define version 0.2.4
 %define	rel		1
 %if %mdkversion < 201100
 %define release %mkrel %rel
@@ -17,6 +17,7 @@ License:	BSD
 Group:		Development/Python
 Url:		http://github.com/traviscline/gevent-zeromq/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch:	noarch
 Requires:	python-gevent, python-pyzmq >= 2.2.0
 BuildRequires:	python-devel, python-cython, python-gevent, python-pyzmq >= 2.2.0
 
@@ -41,4 +42,23 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %defattr(-,root,root)
 %doc examples/
-%py_platsitedir/%{module}*
+%py_sitedir/%{module}*
+
+
+%changelog
+* Tue Jul 17 2012 Lev Givon <lev@mandriva.org> 0.2.4-1
++ Revision: 810080
+- Update to 0.2.4.
+
+* Wed Jul 04 2012 Lev Givon <lev@mandriva.org> 0.2.3-1
++ Revision: 808003
+- Update to 0.2.3.
+
+* Mon May 14 2012 Lev Givon <lev@mandriva.org> 0.2.2-2
++ Revision: 798887
+- Rebuild against latest zeromq libs.
+
+* Mon Feb 06 2012 Lev Givon <lev@mandriva.org> 0.2.2-1
++ Revision: 771329
+- imported package python-gevent_zeromq
+
