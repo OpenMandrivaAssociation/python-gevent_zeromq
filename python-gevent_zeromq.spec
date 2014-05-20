@@ -36,6 +36,10 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 %files
 %doc examples/
 %{py_puresitedir}/%{module}*
+%{_libdir}/debug/.build-id/0b/c724b8ef5940af9dd9e528a1e1a06e92e3e00f
+%{_libdir}/debug/.build-id/0b/c724b8ef5940af9dd9e528a1e1a06e92e3e00f.debug
+%{_libdir}/debug%{py_puresitedir}/gevent_zeromq/core.so.debug
+/usr/src/debug/gevent_zeromq-0.2.5/gevent_zeromq/core.c
 
 
 
