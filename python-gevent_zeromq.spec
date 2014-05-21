@@ -10,6 +10,7 @@ Name:		python-%{module}
 Version:	0.2.5
 Release:	1
 Source0:	http://pypi.python.org/packages/source/g/gevent_zeromq/gevent_zeromq-%{version}.tar.gz
+Source100: %{name}.rpmlintrc
 License:	BSD
 Group:		Development/Python
 Url:		http://github.com/traviscline/gevent-zeromq/
