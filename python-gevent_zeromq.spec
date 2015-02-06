@@ -4,7 +4,7 @@ Summary:	Gevent compatibility layer for pyzmq
 
 Name:		python-%{module}
 Version:	0.2.5
-Release:	2
+Release:	3
 Source0:	http://pypi.python.org/packages/source/g/gevent_zeromq/gevent_zeromq-%{version}.tar.gz
 Source100: %{name}.rpmlintrc
 License:	BSD
