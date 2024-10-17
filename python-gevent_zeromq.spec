@@ -9,7 +9,7 @@ Source0:	http://pypi.python.org/packages/source/g/gevent_zeromq/gevent_zeromq-%{
 Source100: %{name}.rpmlintrc
 License:	BSD
 Group:		Development/Python
-Url:		http://github.com/traviscline/gevent-zeromq/
+Url:		https://github.com/traviscline/gevent-zeromq/
 Requires:	python-gevent, python-pyzmq >= 2.2.0
 BuildRequires:	python-devel, python-cython, python-gevent, python-pyzmq >= 2.2.0
 
